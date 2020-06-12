@@ -1,16 +1,14 @@
-package com.flipkart.dao;
+package com.flipkart.service;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.User;
 
-public interface UserDao {
-	
-	public String checkIdentity(User user);
-	public void registerUser(User user);
-	public void addUser(User user);
+public interface AdminInterface {
+  
+	public void addUser();
 	public void deleteUser(int userId);
 	public void editUser(int userId);
-	public void addCourse(Course course);
+	public void addCourse();
 	public void deleteCourse(int courseId);
 	public void editCourse(int courseId);
 	
