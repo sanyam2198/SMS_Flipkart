@@ -1,0 +1,499 @@
+07:36:58,633  INFO UserClient,main:23 - 1 Check Identity
+07:36:58,636  INFO UserClient,main:25 - 2 Register User
+07:36:58,637  INFO UserClient,main:29 - Select an operation you want to do
+07:37:01,930  INFO UserOperation,main:22 - Enter the userName
+07:37:03,969  INFO UserOperation,main:26 - Enter your password
+07:37:07,618  INFO UserDaoImpl,main:42 - 101
+07:37:07,619  INFO UserDaoImpl,main:43 - password
+07:37:07,620  INFO UserDaoImpl,main:44 - sanyam
+07:37:07,620  INFO UserDaoImpl,main:45 - student
+07:37:07,621  INFO UserClient,main:39 - student
+07:37:07,621  INFO UserClient,main:29 - Select an operation you want to do
+08:22:59,442  INFO UserClient,main:23 - 1 Check Identity
+08:22:59,471  INFO UserClient,main:25 - 2 Register User
+08:22:59,479  INFO UserClient,main:29 - Select an operation you want to do
+08:23:01,727  INFO UserOperation,main:22 - Enter the userName
+08:23:03,755  INFO UserOperation,main:26 - Enter your password
+08:23:09,507  INFO UserDaoImpl,main:42 - 101
+08:23:09,509  INFO UserDaoImpl,main:43 - password
+08:23:09,509  INFO UserDaoImpl,main:44 - sanyam
+08:23:09,513  INFO UserDaoImpl,main:45 - student
+08:23:09,515  INFO UserClient,main:39 - student
+08:23:09,518  INFO UserClient,main:42 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+08:23:09,518  INFO UserClient,main:45 - Enter your choice
+08:23:11,900  INFO UserClient,main:45 - Enter your choice
+10:11:39,806  INFO UserClient,main:23 - 1 Check Identity
+10:11:39,810  INFO UserClient,main:25 - 2 Register User
+10:11:39,810  INFO UserClient,main:29 - Select an operation you want to do
+10:12:01,088  INFO UserOperation,main:22 - Enter the userName
+10:12:04,830  INFO UserOperation,main:26 - Enter your password
+10:12:11,096  INFO UserDaoImpl,main:42 - 101
+10:12:11,097  INFO UserDaoImpl,main:43 - password
+10:12:11,098  INFO UserDaoImpl,main:44 - sanyam
+10:12:11,098  INFO UserDaoImpl,main:45 - student
+10:12:11,101  INFO UserClient,main:39 - student
+10:12:11,103  INFO UserClient,main:42 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+10:12:11,104  INFO UserClient,main:45 - Enter your choice
+10:12:17,863  INFO UserClient,main:45 - Enter your choice
+14:36:00,286  INFO UserClient,main:25 - 1 Check Identity
+14:36:00,291  INFO UserClient,main:27 - 2 Register User
+14:36:00,291  INFO UserClient,main:31 - Select an operation you want to do
+14:36:04,104  INFO UserOperation,main:22 - Enter the userName
+14:36:06,554  INFO UserOperation,main:26 - Enter your password
+14:36:11,220  INFO UserDaoImpl,main:42 - 101
+14:36:11,221  INFO UserDaoImpl,main:43 - password
+14:36:11,221  INFO UserDaoImpl,main:44 - sanyam
+14:36:11,222  INFO UserDaoImpl,main:45 - student
+14:36:11,222  INFO UserClient,main:41 - student
+14:36:11,237  INFO UserClient,main:47 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:36:11,238  INFO UserClient,main:50 - Enter your choice
+14:41:07,422  INFO UserClient,main:25 - 1 Check Identity
+14:41:07,427  INFO UserClient,main:27 - 2 Register User
+14:41:07,428  INFO UserClient,main:31 - Select an operation you want to do
+14:41:10,630  INFO UserOperation,main:22 - Enter the userName
+14:41:12,901  INFO UserOperation,main:26 - Enter your password
+14:41:17,504  INFO UserDaoImpl,main:42 - 101
+14:41:17,505  INFO UserDaoImpl,main:43 - password
+14:41:17,505  INFO UserDaoImpl,main:44 - sanyam
+14:41:17,506  INFO UserDaoImpl,main:45 - student
+14:41:17,506  INFO UserClient,main:41 - student
+14:41:17,526  INFO UserClient,main:47 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:41:17,526  INFO UserClient,main:50 - Enter your choice
+14:42:22,128  INFO UserClient,main:25 - 1 Check Identity
+14:42:22,132  INFO UserClient,main:27 - 2 Register User
+14:42:22,133  INFO UserClient,main:31 - Select an operation you want to do
+14:42:23,975  INFO UserOperation,main:22 - Enter the userName
+14:42:26,084  INFO UserOperation,main:26 - Enter your password
+14:42:30,074  INFO UserDaoImpl,main:42 - 101
+14:42:30,075  INFO UserDaoImpl,main:43 - password
+14:42:30,077  INFO UserDaoImpl,main:44 - sanyam
+14:42:30,077  INFO UserDaoImpl,main:45 - student
+14:42:30,078  INFO UserClient,main:41 - student
+14:42:30,098  INFO UserClient,main:47 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:42:30,098  INFO UserClient,main:50 - Enter your choice
+14:42:39,600  INFO UserClient,main:50 - Enter your choice
+14:44:37,444  INFO UserClient,main:25 - 1 Check Identity
+14:44:37,449  INFO UserClient,main:27 - 2 Register User
+14:44:37,450  INFO UserClient,main:31 - Select an operation you want to do
+14:44:40,148  INFO UserOperation,main:22 - Enter the userName
+14:44:42,853  INFO UserOperation,main:26 - Enter your password
+14:44:47,374  INFO UserDaoImpl,main:42 - 101
+14:44:47,375  INFO UserDaoImpl,main:43 - password
+14:44:47,375  INFO UserDaoImpl,main:44 - sanyam
+14:44:47,376  INFO UserDaoImpl,main:45 - student
+14:44:47,377  INFO UserClient,main:41 - student
+14:44:47,398  INFO UserClient,main:47 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:44:47,399  INFO UserClient,main:50 - Enter your choice
+14:47:09,505  INFO UserClient,main:25 - 1 Check Identity
+14:47:09,510  INFO UserClient,main:27 - 2 Register User
+14:47:09,511  INFO UserClient,main:31 - Select an operation you want to do
+14:47:11,178  INFO UserOperation,main:22 - Enter the userName
+14:47:13,095  INFO UserOperation,main:26 - Enter your password
+14:47:17,440  INFO UserDaoImpl,main:42 - 101
+14:47:17,441  INFO UserDaoImpl,main:43 - password
+14:47:17,447  INFO UserDaoImpl,main:44 - sanyam
+14:47:17,447  INFO UserDaoImpl,main:45 - student
+14:47:17,450  INFO UserClient,main:41 - student
+14:47:17,450  INFO UserClient,main:43 - Your login time
+14:47:17,467  INFO UserClient,main:48 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:47:17,468  INFO UserClient,main:51 - Enter your choice
+14:47:31,998  INFO UserClient,main:70 - Your logout time
+14:47:31,999  INFO UserClient,main:51 - Enter your choice
+14:51:34,155  INFO UserClient,main:25 - 1 Check Identity
+14:51:34,158  INFO UserClient,main:27 - 2 Register User
+14:51:34,159  INFO UserClient,main:31 - Select an operation you want to do
+14:51:36,953  INFO UserOperation,main:22 - Enter the userName
+14:51:38,995  INFO UserOperation,main:26 - Enter your password
+14:51:43,760  INFO UserDaoImpl,main:42 - 101
+14:51:43,761  INFO UserDaoImpl,main:43 - password
+14:51:43,761  INFO UserDaoImpl,main:44 - sanyam
+14:51:43,763  INFO UserDaoImpl,main:45 - student
+14:51:43,764  INFO UserClient,main:41 - student
+14:51:43,765  INFO UserClient,main:43 - Your login time
+14:51:43,778  INFO DateAndTime,main:32 - 12/
+14:51:43,779  INFO DateAndTime,main:33 - JUNE/
+14:51:43,779  INFO DateAndTime,main:34 - 2020.
+14:51:43,781  INFO DateAndTime,main:35 - Today is FRIDAY
+14:51:43,782  INFO DateAndTime,main:37 - Calendar Day 164
+14:51:43,783  INFO DateAndTime,main:38 - Current Time : 14:51:43.777303200
+14:51:43,784  INFO UserClient,main:48 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:51:43,787  INFO UserClient,main:51 - Enter your choice
+14:52:35,558  INFO UserClient,main:25 - 1 Check Identity
+14:52:35,561  INFO UserClient,main:27 - 2 Register User
+14:52:35,562  INFO UserClient,main:31 - Select an operation you want to do
+14:52:37,901  INFO UserOperation,main:22 - Enter the userName
+14:52:40,114  INFO UserOperation,main:26 - Enter your password
+14:52:43,668  INFO UserDaoImpl,main:42 - 101
+14:52:43,669  INFO UserDaoImpl,main:43 - password
+14:52:43,670  INFO UserDaoImpl,main:44 - sanyam
+14:52:43,670  INFO UserDaoImpl,main:45 - student
+14:52:43,671  INFO UserClient,main:41 - student
+14:52:43,673  INFO UserClient,main:43 - Your login time
+14:52:43,689  INFO DateAndTime,main:32 - 12/JUNE/2020.
+14:52:43,691  INFO DateAndTime,main:35 - Today is FRIDAY
+14:52:43,692  INFO DateAndTime,main:37 - Calendar Day 164
+14:52:43,693  INFO DateAndTime,main:38 - Current Time : 14:52:43.689606400
+14:52:43,696  INFO UserClient,main:48 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:52:43,699  INFO UserClient,main:51 - Enter your choice
+14:52:59,821  INFO UserClient,main:70 - Your logout time
+14:52:59,822  INFO DateAndTime,main:32 - 12/JUNE/2020.
+14:52:59,823  INFO DateAndTime,main:35 - Today is FRIDAY
+14:52:59,824  INFO DateAndTime,main:37 - Calendar Day 164
+14:52:59,825  INFO DateAndTime,main:38 - Current Time : 14:52:59.822393400
+14:52:59,825  INFO UserClient,main:51 - Enter your choice
+14:54:33,954  INFO UserClient,main:25 - 1 Check Identity
+14:54:33,958  INFO UserClient,main:27 - 2 Register User
+14:54:33,958  INFO UserClient,main:31 - Select an operation you want to do
+14:54:47,105  INFO UserOperation,main:22 - Enter the userName
+14:54:49,255  INFO UserOperation,main:26 - Enter your password
+14:54:53,256  INFO UserDaoImpl,main:42 - 101
+14:54:53,257  INFO UserDaoImpl,main:43 - password
+14:54:53,258  INFO UserDaoImpl,main:44 - sanyam
+14:54:53,258  INFO UserDaoImpl,main:45 - student
+14:54:53,259  INFO UserClient,main:41 - student
+14:54:53,259  INFO UserClient,main:43 - Your login time
+14:54:53,275  INFO DateAndTime,main:24 - Current Time : 14:54:53.274225800
+14:54:53,276  INFO DateAndTime,main:25 - 12/JUNE/2020.
+14:54:53,278  INFO DateAndTime,main:26 - Today is FRIDAY
+14:54:53,279  INFO DateAndTime,main:27 - Calendar Day 164
+14:54:53,280  INFO UserClient,main:48 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+14:54:53,280  INFO UserClient,main:51 - Enter your choice
+15:00:11,152  INFO UserClient,main:27 - 1 Check Identity
+15:00:11,156  INFO UserClient,main:29 - 2 Register User
+15:00:11,158  INFO UserClient,main:33 - Select an operation you want to do
+15:00:15,731  INFO UserOperation,main:22 - Enter the userName
+15:00:19,260  INFO UserOperation,main:26 - Enter your password
+15:00:24,207  INFO UserDaoImpl,main:42 - 101
+15:00:24,208  INFO UserDaoImpl,main:43 - password
+15:00:24,208  INFO UserDaoImpl,main:44 - sanyam
+15:00:24,209  INFO UserDaoImpl,main:45 - student
+15:00:24,209  INFO UserClient,main:43 - student
+15:00:24,212  INFO UserClient,main:46 - Your login time
+15:00:24,225  INFO DateAndTime,main:24 - Current Time : 15:00:24.225355400
+15:00:24,226  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:00:24,228  INFO DateAndTime,main:26 - Today is FRIDAY
+15:00:24,228  INFO DateAndTime,main:27 - Calendar Day 164
+15:00:24,229  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog
+15:00:24,230  INFO UserClient,main:54 - Enter your choice
+15:00:36,028  INFO UserClient,main:74 - Your logout time
+15:00:36,029  INFO DateAndTime,main:24 - Current Time : 15:00:36.029154900
+15:00:36,030  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:00:36,031  INFO DateAndTime,main:26 - Today is FRIDAY
+15:00:36,031  INFO DateAndTime,main:27 - Calendar Day 164
+15:00:36,032  INFO UserClient,main:54 - Enter your choice
+15:04:12,688  INFO UserClient,main:27 - 1 Check Identity
+15:04:12,776  INFO UserClient,main:29 - 2 Register User
+15:04:12,788  INFO UserClient,main:33 - Select an operation you want to do
+15:04:14,926  INFO UserOperation,main:22 - Enter the userName
+15:04:17,884  INFO UserOperation,main:26 - Enter your password
+15:04:25,705  INFO UserDaoImpl,main:42 - 101
+15:04:25,706  INFO UserDaoImpl,main:43 - password
+15:04:25,709  INFO UserDaoImpl,main:44 - sanyam
+15:04:25,710  INFO UserDaoImpl,main:45 - student
+15:04:25,711  INFO UserClient,main:43 - student
+15:04:25,714  INFO UserClient,main:46 - Your login time
+15:04:25,759  INFO DateAndTime,main:24 - Current Time : 15:04:25.759530900
+15:04:25,766  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:04:25,768  INFO DateAndTime,main:26 - Today is FRIDAY
+15:04:25,770  INFO DateAndTime,main:27 - Calendar Day 164
+15:04:25,772  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+15:04:25,774  INFO UserClient,main:54 - Enter your choice
+15:04:38,235  INFO UserClient,main:74 - Your logout time
+15:04:38,236  INFO DateAndTime,main:24 - Current Time : 15:04:38.236965
+15:04:38,236  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:04:38,237  INFO DateAndTime,main:26 - Today is FRIDAY
+15:04:38,238  INFO DateAndTime,main:27 - Calendar Day 164
+15:04:38,239  INFO UserClient,main:78 - Session Lasted for : 012
+15:04:38,239  INFO UserClient,main:54 - Enter your choice
+15:05:51,620  INFO UserClient,main:27 - 1 Check Identity
+15:05:51,625  INFO UserClient,main:29 - 2 Register User
+15:05:51,626  INFO UserClient,main:33 - Select an operation you want to do
+15:05:54,751  INFO UserOperation,main:22 - Enter the userName
+15:05:56,903  INFO UserOperation,main:26 - Enter your password
+15:06:02,239  INFO UserDaoImpl,main:42 - 101
+15:06:02,245  INFO UserDaoImpl,main:43 - password
+15:06:02,246  INFO UserDaoImpl,main:44 - sanyam
+15:06:02,264  INFO UserDaoImpl,main:45 - student
+15:06:02,280  INFO UserClient,main:43 - student
+15:06:02,364  INFO UserClient,main:46 - Your login time
+15:06:02,652  INFO DateAndTime,main:24 - Current Time : 15:06:02.652079600
+15:06:02,679  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:06:02,696  INFO DateAndTime,main:26 - Today is FRIDAY
+15:06:02,723  INFO DateAndTime,main:27 - Calendar Day 164
+15:06:02,751  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+15:06:02,756  INFO UserClient,main:54 - Enter your choice
+15:06:06,810  INFO UserClient,main:74 - Your logout time
+15:06:06,811  INFO DateAndTime,main:24 - Current Time : 15:06:06.811895
+15:06:06,811  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:06:06,812  INFO DateAndTime,main:26 - Today is FRIDAY
+15:06:06,812  INFO DateAndTime,main:27 - Calendar Day 164
+15:06:06,813  INFO UserClient,main:78 - Session Lasted for : 0min4sec
+15:06:06,814  INFO UserClient,main:54 - Enter your choice
+15:06:38,727  INFO UserClient,main:27 - 1 Check Identity
+15:06:38,737  INFO UserClient,main:29 - 2 Register User
+15:06:38,738  INFO UserClient,main:33 - Select an operation you want to do
+15:06:42,284  INFO UserOperation,main:22 - Enter the userName
+15:06:44,730  INFO UserOperation,main:26 - Enter your password
+15:06:49,268  INFO UserDaoImpl,main:42 - 101
+15:06:49,277  INFO UserDaoImpl,main:43 - password
+15:06:49,290  INFO UserDaoImpl,main:44 - sanyam
+15:06:49,301  INFO UserDaoImpl,main:45 - student
+15:06:49,303  INFO UserClient,main:43 - student
+15:06:49,307  INFO UserClient,main:46 - Your login time
+15:06:49,341  INFO DateAndTime,main:24 - Current Time : 15:06:49.341731500
+15:06:49,350  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:06:49,354  INFO DateAndTime,main:26 - Today is FRIDAY
+15:06:49,360  INFO DateAndTime,main:27 - Calendar Day 164
+15:06:49,364  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+15:06:49,371  INFO UserClient,main:54 - Enter your choice
+15:06:54,690  INFO UserClient,main:74 - Your logout time
+15:06:54,691  INFO DateAndTime,main:24 - Current Time : 15:06:54.691312800
+15:06:54,692  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:06:54,692  INFO DateAndTime,main:26 - Today is FRIDAY
+15:06:54,693  INFO DateAndTime,main:27 - Calendar Day 164
+15:06:54,694  INFO UserClient,main:78 - Session Lasted for : 0mins 5secs
+15:06:54,694  INFO UserClient,main:54 - Enter your choice
+15:10:40,601  INFO UserClient,main:27 - 1 Check Identity
+15:10:40,605  INFO UserClient,main:29 - 2 Register User
+15:10:40,606  INFO UserClient,main:33 - Select an operation you want to do
+15:11:07,239  INFO UserOperation,main:22 - Enter the userName
+15:11:09,484  INFO UserOperation,main:26 - Enter your password
+15:11:15,808  INFO UserDaoImpl,main:42 - 101
+15:11:15,811  INFO UserDaoImpl,main:43 - password
+15:11:15,820  INFO UserDaoImpl,main:44 - sanyam
+15:11:15,833  INFO UserDaoImpl,main:45 - student
+15:11:15,840  INFO UserClient,main:43 - student
+15:11:15,843  INFO UserClient,main:46 - Your login time
+15:11:15,890  INFO DateAndTime,main:24 - Current Time : 15:11:15.889852
+15:11:15,893  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:11:15,922  INFO DateAndTime,main:26 - Today is FRIDAY
+15:11:15,931  INFO DateAndTime,main:27 - Calendar Day 164
+15:11:15,933  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+15:11:15,952  INFO UserClient,main:54 - Enter your choice
+15:11:35,287  INFO UserClient,main:74 - Your logout time
+15:11:35,288  INFO DateAndTime,main:24 - Current Time : 15:11:35.288409200
+15:11:35,289  INFO DateAndTime,main:25 - 12/JUNE/2020.
+15:11:35,290  INFO DateAndTime,main:26 - Today is FRIDAY
+15:11:35,290  INFO DateAndTime,main:27 - Calendar Day 164
+15:11:35,293  INFO UserClient,main:78 - Session Lasted for : 0mins 19secs
+15:11:35,293  INFO UserClient,main:54 - Enter your choice
+15:24:09,476  INFO UserClient,main:27 - 1 Check Identity
+15:24:09,479  INFO UserClient,main:29 - 2 Register User
+15:24:09,482  INFO UserClient,main:33 - Select an operation you want to do
+15:24:15,603  INFO UserOperation,main:22 - Enter the userName
+15:24:17,743  INFO UserOperation,main:26 - Enter your password
+15:24:21,697  INFO UserDaoImpl,main:42 - 101
+15:24:21,698  INFO UserDaoImpl,main:43 - password
+15:24:21,698  INFO UserDaoImpl,main:44 - sanyam
+15:24:21,699  INFO UserDaoImpl,main:45 - student
+15:24:21,699  INFO UserClient,main:43 - student
+15:24:21,703  INFO UserClient,main:46 - Your login time
+15:24:21,741  INFO DateAndTime,main:24 -  15:24:21.739755400FRIDAY12-JUNE-2020 FRIDAY
+15:24:21,743  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+15:24:21,744  INFO UserClient,main:54 - Enter your choice
+19:32:25,871  INFO UserClient,main:27 - 1 Check Identity
+19:32:25,876  INFO UserClient,main:29 - 2 Register User
+19:32:25,878  INFO UserClient,main:33 - Select an operation you want to do
+19:32:41,248  INFO UserOperation,main:22 - Enter the userName
+19:32:43,580  INFO UserOperation,main:26 - Enter your password
+19:32:47,487  INFO UserDaoImpl,main:42 - 101
+19:32:47,489  INFO UserDaoImpl,main:43 - password
+19:32:47,489  INFO UserDaoImpl,main:44 - sanyam
+19:32:47,490  INFO UserDaoImpl,main:45 - student
+19:32:47,490  INFO UserClient,main:43 - student
+19:32:47,491  INFO UserClient,main:46 - Your login time
+19:32:47,507  INFO DateAndTime,main:24 -  19:32:47.506913700 FRIDAY12-JUNE-2020 FRIDAY
+19:32:47,508  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+19:32:47,509  INFO UserClient,main:54 - Enter your choice
+19:32:54,055 ERROR UserClient,main:46 - Column 'id' not found.
+19:32:54,055  INFO UserClient,main:69 - 
+19:32:54,056  INFO UserClient,main:54 - Enter your choice
+19:39:27,127  INFO UserClient,main:27 - 1 Check Identity
+19:39:27,131  INFO UserClient,main:29 - 2 Register User
+19:39:27,132  INFO UserClient,main:33 - Select an operation you want to do
+19:39:29,079  INFO UserOperation,main:22 - Enter the userName
+19:39:32,326  INFO UserOperation,main:26 - Enter your password
+19:39:36,365  INFO UserClient,main:43 - Incorrect password or username
+19:39:36,366  INFO UserClient,main:46 - Your login time
+19:39:36,375  INFO DateAndTime,main:24 -  19:39:36.374055700 FRIDAY12-JUNE-2020 FRIDAY
+19:39:36,376  INFO UserClient,main:33 - Select an operation you want to do
+19:42:48,831  INFO UserClient,main:27 - 1 Check Identity
+19:42:48,838  INFO UserClient,main:29 - 2 Register User
+19:42:48,839  INFO UserClient,main:33 - Select an operation you want to do
+19:42:51,049  INFO UserOperation,main:22 - Enter the userName
+19:42:53,254  INFO UserOperation,main:26 - Enter your password
+19:42:57,898  INFO UserDaoImpl,main:42 - 101
+19:42:57,898  INFO UserDaoImpl,main:43 - password
+19:42:57,899  INFO UserDaoImpl,main:44 - sanyam
+19:42:57,899  INFO UserDaoImpl,main:45 - student
+19:42:57,900  INFO UserClient,main:43 - student
+19:42:57,901  INFO UserClient,main:46 - Your login time
+19:42:57,914  INFO DateAndTime,main:24 -  19:42:57.913142100 FRIDAY12-JUNE-2020 FRIDAY
+19:42:57,915  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+19:42:57,915  INFO UserClient,main:54 - Enter your choice
+19:43:01,901 ERROR UserClient,main:46 - Column 'id' not found.
+19:43:01,902  INFO UserClient,main:69 - 
+19:43:01,903  INFO UserClient,main:54 - Enter your choice
+19:48:18,017  INFO UserClient,main:27 - 1 Check Identity
+19:48:18,022  INFO UserClient,main:29 - 2 Register User
+19:48:18,023  INFO UserClient,main:33 - Select an operation you want to do
+19:48:20,920  INFO UserOperation,main:22 - Enter the userName
+19:48:23,105  INFO UserOperation,main:26 - Enter your password
+19:48:26,905  INFO UserDaoImpl,main:42 - 101
+19:48:26,908  INFO UserDaoImpl,main:43 - password
+19:48:26,909  INFO UserDaoImpl,main:44 - sanyam
+19:48:26,916  INFO UserDaoImpl,main:45 - student
+19:48:26,918  INFO UserClient,main:43 - student
+19:48:26,920  INFO UserClient,main:46 - Your login time
+19:48:26,931  INFO DateAndTime,main:24 -  19:48:26.929747200 FRIDAY12-JUNE-2020 FRIDAY
+19:48:26,931  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+19:48:26,932  INFO UserClient,main:54 - Enter your choice
+19:48:30,333  INFO UserClient,main:69 - 101,Java,Java Programming102,SQL,MySQL
+19:48:30,333  INFO UserClient,main:54 - Enter your choice
+19:52:25,593  INFO UserClient,main:27 - 1 Check Identity
+19:52:25,596  INFO UserClient,main:29 - 2 Register User
+19:52:25,596  INFO UserClient,main:33 - Select an operation you want to do
+19:52:28,666  INFO UserOperation,main:22 - Enter the userName
+19:52:30,872  INFO UserOperation,main:26 - Enter your password
+19:52:34,861  INFO UserDaoImpl,main:42 - 101
+19:52:34,862  INFO UserDaoImpl,main:43 - password
+19:52:34,862  INFO UserDaoImpl,main:44 - sanyam
+19:52:34,863  INFO UserDaoImpl,main:45 - student
+19:52:34,863  INFO UserClient,main:43 - student
+19:52:34,864  INFO UserClient,main:46 - Your login time
+19:52:34,882  INFO DateAndTime,main:24 -  19:52:34.876782200 FRIDAY12-JUNE-2020 FRIDAY
+19:52:34,883  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+19:52:34,884  INFO UserClient,main:54 - Enter your choice
+19:52:37,759  INFO UserClient,main:69 - 
+19:52:37,760  INFO UserClient,main:54 - Enter your choice
+19:54:30,094  INFO UserClient,main:27 - 1 Check Identity
+19:54:30,098  INFO UserClient,main:29 - 2 Register User
+19:54:30,098  INFO UserClient,main:33 - Select an operation you want to do
+19:54:31,758  INFO UserOperation,main:22 - Enter the userName
+19:54:34,011  INFO UserOperation,main:26 - Enter your password
+19:54:37,671  INFO UserDaoImpl,main:42 - 101
+19:54:37,672  INFO UserDaoImpl,main:43 - password
+19:54:37,672  INFO UserDaoImpl,main:44 - sanyam
+19:54:37,673  INFO UserDaoImpl,main:45 - student
+19:54:37,673  INFO UserClient,main:43 - student
+19:54:37,675  INFO UserClient,main:46 - Your login time
+19:54:37,687  INFO DateAndTime,main:24 -  19:54:37.685773900 FRIDAY12-JUNE-2020 FRIDAY
+19:54:37,687  INFO UserClient,main:51 - 
+ 1 Add Course
+ 2 Drop Course
+ 3 Pay Bill
+ 4 View Report Card
+ 5 Request Catalog 
+ 6 Log Out
+19:54:37,688  INFO UserClient,main:54 - Enter your choice
+19:54:39,621  INFO UserClient,main:69 - 
+19:54:39,622  INFO UserClient,main:54 - Enter your choice
