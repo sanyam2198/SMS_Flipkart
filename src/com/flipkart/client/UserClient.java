@@ -37,7 +37,7 @@ public class UserClient {
 		
 		while(true) 
 		{
-			logger.info("Select an operation you want to do");
+			logger.info("Select an operation you want to do ");
 			Scanner sc = new Scanner(System.in);
 			int choice = sc.nextInt();
 			
