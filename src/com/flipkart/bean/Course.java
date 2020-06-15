@@ -1,3 +1,5 @@
+// Bean class of courses. Defines the courses parameters.
+
 package com.flipkart.bean;
 
 public class Course {

@@ -3,6 +3,8 @@ package com.flipkart.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -68,13 +70,14 @@ public class UserDaoImpl implements UserDao {
 		 Connection conn = DBUtil.getConnection();
 		 try {
 			 
-		 String sql = "insert into users values (?,?,?,?)";
+		 String sql = "insert into users values (?,?,?,?,?)";
 		 PreparedStatement stmt = conn.prepareStatement(sql);
 		 
 		 stmt.setInt(1,user.getUserId());
 		 stmt.setString(2,user.getPassword());
 		 stmt.setString(3,user.getUserName());
 		 stmt.setString(4,user.getRole());
+		 stmt.setString(5,user.getGender());
 		 
 		 int s = stmt.executeUpdate();
 		 logger.info(user.getUserName()+ " added");
@@ -177,6 +180,35 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public void editCourse(int courseId) {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<User> viewUsers() {
+		List <User> userList = new ArrayList <User>();
+		
+		Connection conn = DBUtil.getConnection();
+		
+		try {
+			 String sql = "select * from users";
+			 PreparedStatement stmt = conn.prepareStatement(sql);
+			 
+			 ResultSet rs = stmt.executeQuery();
+			 
+			 while(rs.next()) {
+				 User user = new User();
+				 user.setUserId(rs.getInt("userId"));
+				 user.setPassword(rs.getString("password"));
+				 user.setUserName(rs.getString("userName"));
+				 user.setRole(rs.getString("role"));
+				 user.setGender(rs.getString("gender"));
+				 userList.add(user);		
+			 }
+		}
+		catch(Exception e) {
+			
+		}
+		return userList;
 		
 	}
 

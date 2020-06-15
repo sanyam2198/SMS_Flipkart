@@ -11,5 +11,6 @@ public interface AdminInterface {
 	public void addCourse();
 	public void deleteCourse(int courseId);
 	public void editCourse(int courseId);
+	public void viewAllStudents();
 	
 }

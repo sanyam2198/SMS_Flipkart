@@ -52,6 +52,12 @@ public class StudentOperation implements StudentInterface{
 		registerationdao.dropCourse(courseId,userId);
 		
 	}
+
+	@Override
+	public void viewGrades(int userId) {
+		RegisterationDao registerationdao = new RegisterationDaoImpl();
+		registerationdao.viewGrades(userId);
+	}
 }
 
 

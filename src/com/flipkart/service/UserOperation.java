@@ -12,6 +12,8 @@ public class UserOperation implements UserInterface{
 	
 	private static Logger logger = Logger.getLogger(UserOperation.class);
 
+	// Checking Identity.
+	
 	@Override
 	public String checkIdentity(User user) {
 		

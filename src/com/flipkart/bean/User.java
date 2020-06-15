@@ -8,7 +8,19 @@ public class User {
 	private String password;
 	private String userName;
 	private String role;
-	
+	private String gender;
+	/**
+	 * @return the gender
+	 */
+	public String getGender() {
+		return gender;
+	}
+	/**
+	 * @param gender the gender to set
+	 */
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	/**
 	 * @return the userId
 	 */

@@ -19,7 +19,7 @@ public class RegisterationDaoImpl implements RegisterationDao {
 		
 		try {
 			
-			String sql = "insert into registeration values(?,?)";
+			String sql = "insert into registeration(courseId,userId) values(?,?)";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1,courseId);
 			stmt.setInt(2,userId);
@@ -54,6 +54,36 @@ public class RegisterationDaoImpl implements RegisterationDao {
 //			catch(SQLException e) {
 //				e.printStackTrace();
 //			}
+		
+	}
+
+	@Override
+	public void viewGrades(int userId) {
+		
+		 Connection conn = DBUtil.getConnection();
+			
+			try {
+				
+				String sql = "select * from registeration where userId=?";
+				PreparedStatement stmt = conn.prepareStatement(sql);
+				stmt.setInt(1,userId);
+                 ResultSet rs = stmt.executeQuery();
+				
+				while(rs.next()) {
+					int courseId = rs.getInt("courseId");
+					String grade = rs.getString("grades");
+					logger.info("#######################################################");
+					logger.info("Here's your report card \n");
+					logger.info("Student "+ userId + " scored " + grade + " in subject "+ courseId);
+					logger.info("#######################################################");
+				 }
+			
+				
+				
+				  }
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 		
 	}
 

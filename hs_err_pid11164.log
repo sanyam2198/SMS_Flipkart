@@ -1,0 +1,211 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes for Failed to commit area from 0x0000000082e00000 to 0x000000008ac00000 of length 132120576.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3315), pid=11164, tid=2416
+#
+# JRE version:  (14.0.1+7) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 com.flipkart.client.UserClient
+
+Host: Intel(R) Core(TM) i3-2328M CPU @ 2.20GHz, 4 cores, 7G,  Windows 8 , 64 bit Build 9200 (6.2.9200.16384)
+Time: Sun Jun 14 13:47:55 2020 India Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000005d35312000):  JavaThread "Unknown thread" [_thread_in_vm, id=2416, stack(0x0000005d33270000,0x0000005d33370000)]
+
+Stack: [0x0000005d33270000,0x0000005d33370000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f840a]
+V  [jvm.dll+0x741e4a]
+V  [jvm.dll+0x7435ff]
+V  [jvm.dll+0x743c43]
+V  [jvm.dll+0x20d288]
+V  [jvm.dll+0x5f57ba]
+V  [jvm.dll+0x5ea615]
+V  [jvm.dll+0x2c7e9c]
+V  [jvm.dll+0x2c7cd2]
+V  [jvm.dll+0x2cdbbc]
+V  [jvm.dll+0x313ff8]
+V  [jvm.dll+0x313720]
+V  [jvm.dll+0x2a092a]
+V  [jvm.dll+0x2a1a79]
+V  [jvm.dll+0x71f718]
+V  [jvm.dll+0x321c44]
+V  [jvm.dll+0x700b0c]
+V  [jvm.dll+0x392dff]
+V  [jvm.dll+0x394e71]
+C  [jli.dll+0x523b]
+C  [ucrtbase.DLL+0x203ba]
+C  [KERNEL32.DLL+0x167e]
+C  [ntdll.dll+0x5d609]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000007ffc0093078, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000005d35353800 GCTaskThread "GC Thread#0" [stack: 0x0000005d51670000,0x0000005d51770000] [id=11804]
+  0x0000005d35366800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000005d51770000,0x0000005d51870000] [id=13556]
+  0x0000005d35368000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000005d51870000,0x0000005d51970000] [id=5992]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007ffbf8c1257]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000005d3530e050] Heap_lock - owner thread: 0x0000005d35312000
+
+Heap address: 0x0000000082e00000, size: 2002 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+Event: 0.007 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+
+
+Dynamic libraries:
+0x000007f670b60000 - 0x000007f670b6f000 	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe
+0x000007ffe6ab0000 - 0x000007ffe6c70000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007ffe4f20000 - 0x000007ffe5056000 	C:\Windows\system32\KERNEL32.DLL
+0x000007ffd4670000 - 0x000007ffd4683000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x000007ffe3e00000 - 0x000007ffe3ef3000 	C:\Windows\system32\KERNELBASE.dll
+0x000007ffe23c0000 - 0x000007ffe23d8000 	C:\Program Files\Java\jdk-14.0.1\bin\jli.dll
+0x000007ffe23a0000 - 0x000007ffe23b5000 	C:\Program Files\Java\jdk-14.0.1\bin\VCRUNTIME140.dll
+0x000007ffd6160000 - 0x000007ffd6164000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x000007ffd1540000 - 0x000007ffd1544000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x000007ffd1520000 - 0x000007ffd1523000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x000007ffd1500000 - 0x000007ffd1505000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-math-l1-1-0.dll
+0x000007ffd59f0000 - 0x000007ffd59f3000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x000007ffd14d0000 - 0x000007ffd14d3000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x000007ffe41a0000 - 0x000007ffe427e000 	C:\Windows\system32\ADVAPI32.dll
+0x000007ffe1590000 - 0x000007ffe17fa000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16579_none_418ab7ef718b27ef\COMCTL32.dll
+0x000007ffe4610000 - 0x000007ffe475c000 	C:\Windows\system32\USER32.dll
+0x000007ffdfe80000 - 0x000007ffdfe89000 	C:\Windows\SYSTEM32\VERSION.dll
+0x000007ffd14f0000 - 0x000007ffd14f3000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x000007ffd1550000 - 0x000007ffd1554000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-string-l1-1-0.dll
+0x000007ffd1530000 - 0x000007ffd1534000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x000007ffe4330000 - 0x000007ffe43d5000 	C:\Windows\system32\msvcrt.dll
+0x000007ffe6a60000 - 0x000007ffe6aa8000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007ffe3f30000 - 0x000007ffe4070000 	C:\Windows\system32\RPCRT4.dll
+0x000007ffe4990000 - 0x000007ffe4ad0000 	C:\Windows\system32\GDI32.dll
+0x000007ffe22a0000 - 0x000007ffe239c000 	C:\Program Files\Java\jdk-14.0.1\bin\ucrtbase.DLL
+0x000007ffe4ee0000 - 0x000007ffe4f19000 	C:\Windows\system32\IMM32.DLL
+0x000007ffe4080000 - 0x000007ffe4195000 	C:\Windows\system32\MSCTF.dll
+0x000007ffe2200000 - 0x000007ffe229b000 	C:\Program Files\Java\jdk-14.0.1\bin\msvcp140.dll
+0x000007ffd14e0000 - 0x000007ffd14e3000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-time-l1-1-0.dll
+0x000007ffd1510000 - 0x000007ffd1513000 	C:\Program Files\Java\jdk-14.0.1\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x000007ffbf610000 - 0x000007ffc012e000 	C:\Program Files\Java\jdk-14.0.1\bin\server\jvm.dll
+0x000007ffdd8d0000 - 0x000007ffdd8d9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x000007ffddf50000 - 0x000007ffddf70000 	C:\Windows\SYSTEM32\WINMM.dll
+0x000007ffe4ed0000 - 0x000007ffe4ed7000 	C:\Windows\system32\PSAPI.DLL
+0x000007ffe6800000 - 0x000007ffe6858000 	C:\Windows\system32\WS2_32.dll
+0x000007ffddf10000 - 0x000007ffddf42000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x000007ffe67f0000 - 0x000007ffe67f9000 	C:\Windows\system32\NSI.dll
+0x000007ffe1880000 - 0x000007ffe188a000 	C:\Program Files\Java\jdk-14.0.1\bin\jimage.dll
+0x000007ffe0020000 - 0x000007ffe0183000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x000007ffdf460000 - 0x000007ffdf485000 	C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+0x000007ffe01f0000 - 0x000007ffe0206000 	C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-14.0.1\bin;C:\Windows\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16579_none_418ab7ef718b27ef;C:\Program Files\Java\jdk-14.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: com.flipkart.client.UserClient
+java_class_path (initial): C:\Users\RAJIV SOOD\eclipse-workspace\FlipcardDev\SMS_Flipkart2\bin;C:\Program Files\Java\logging-log4j-1.2.11\dist\lib\log4j-1.2.11.jar;C:\Program Files\Java\mysql-connector-java-8.0.19\mysql-connector-java-8.0.19.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2099249152                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2099249152                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-14.0.1
+PATH=C:/Program Files/Java/jdk-14.0.1/bin/server;C:/Program Files/Java/jdk-14.0.1/bin;C:\Program Files\Java\jdk-14.0.1\bin;C:\Program Files\Java\jdk-14.0.1\bin; C:\Program Files\Java\jdk-14.0.1\lib;C:\Users\RAJIV SOOD\Desktop;
+USERNAME=RAJIV SOOD
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 , 64 bit Build 9200 (6.2.9200.16384)
+OS uptime: 3 days 23:10 hours
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 8005M (1553M free)
+TotalPageFile size 14543M (AvailPageFile size 73M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 56M, peak: 182M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7) for windows-amd64 JRE (14.0.1+7), built on Mar  5 2020 10:30:14 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
