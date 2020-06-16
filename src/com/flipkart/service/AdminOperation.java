@@ -42,9 +42,9 @@ public class AdminOperation implements AdminInterface {
 		String role = sc.nextLine();
 		user.setRole(role);
 		
-		logger.info("Enter the gender");
-		String gender = sc.nextLine();
-		user.setGender(gender);
+//		logger.info("Enter the gender");
+//		String gender = sc.nextLine();
+//		user.setGender(gender);
 		
 		
 		UserDao userDao = new UserDaoImpl();

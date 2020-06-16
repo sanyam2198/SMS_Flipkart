@@ -2,7 +2,7 @@ package com.flipkart.service;
 
 import org.apache.log4j.Logger;
 
-import com.flipkart.dao.RegisterationDaoImpl;
+import com.flipkart.dao.CoursesDaoImpl;
 import com.flipkart.dao.RegistrationDao;
 import com.flipkart.dao.RegistrationDaoImpl;
 

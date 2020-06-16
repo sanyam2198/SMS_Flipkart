@@ -28,6 +28,7 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 				ResultSet rs = stmt.executeQuery();
 				
 				logger.info("Professor "+ userId + " teaches following courses");
+				
 				while(rs.next()) {
 					  int courseId = rs.getInt("courseId");
 					  logger.info(courseId);
@@ -47,7 +48,7 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 			
 			try {
 				
-				String sql = "SELECT registeration.userId, professorcourses.userId from registeration,professorcourses where registeration.courseId=professorcourses.courseId ";
+				String sql = "SELECT courses.userId, professorcourses.userId from courses,professorcourses where courses.courseId=professorcourses.courseId ";
 				PreparedStatement stmt = conn.prepareStatement(sql);
 
 				// and professorcourses.userId=userId
@@ -55,7 +56,7 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 				
 				while(rs.next()) {
 					int pUserId = rs.getInt("professorcourses.userId");
-					 int rUserId =  rs.getInt("registeration.userId");
+					 int rUserId =  rs.getInt("courses.userId");
 					 logger.info(pUserId + "  " +rUserId);
 				 }
 		
@@ -84,14 +85,14 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 			
 			try {
 				
-				String sql =  "update registeration set grades=? where userId=? and courseId=?";
+				String sql =  "update courses set grades=? where userId=? and courseId=?";
 				PreparedStatement	stmt = conn.prepareStatement(sql);
 				
 		       stmt.setString(1,grade);
 		       stmt.setInt(2,userId);
 		       stmt.setInt(3,courseId);
 		       
-		       int iw=stmt.executeUpdate();  
+		       int iw= stmt.executeUpdate();  
 		       logger.info(userId + " has been awarded " + grade + " grade in "+ courseId);
 			
 		

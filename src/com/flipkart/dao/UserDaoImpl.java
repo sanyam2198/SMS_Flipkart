@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
@@ -67,27 +68,27 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public void addUser(User user) {
-		 Connection conn = DBUtil.getConnection();
-		 try {
-			 
-		 String sql = "insert into users values (?,?,?,?,?)";
-		 PreparedStatement stmt = conn.prepareStatement(sql);
+	 Connection conn = DBUtil.getConnection();
+	 try {
 		 
-		 stmt.setInt(1,user.getUserId());
-		 stmt.setString(2,user.getPassword());
-		 stmt.setString(3,user.getUserName());
-		 stmt.setString(4,user.getRole());
-		 stmt.setString(5,user.getGender());
+	 String sql = "insert into users values (?,?,?,?,?)";
+	 PreparedStatement stmt = conn.prepareStatement(sql);
+	 
+	 stmt.setInt(1,user.getUserId());
+	 stmt.setString(2,user.getPassword());
+	 stmt.setString(3,user.getUserName());
+	 stmt.setString(4,user.getRole());
+	 stmt.setString(5,user.getGender());
+	 
+	 int s = stmt.executeUpdate();
+	 logger.info(user.getUserName()+ " added");
+	 
+	 }
+	 catch(Exception e) {
 		 
-		 int s = stmt.executeUpdate();
-		 logger.info(user.getUserName()+ " added");
-		 
-		 }
-		 catch(Exception e) {
-			 
-		 }
-		
-	}
+	 }
+	
+}
 
 	@Override
 	public void deleteUser(int userId) {
@@ -213,3 +214,75 @@ public class UserDaoImpl implements UserDao {
 	}
 
 }
+
+
+
+
+
+//public void addUser(User user) {
+//	 Connection conn = DBUtil.getConnection();
+//	 try {
+//		 
+//	 String sql = "insert into users values (?,?,?,?)";
+//	 PreparedStatement stmt = conn.prepareStatement(sql);
+//	 Scanner sc = new Scanner(System.in);
+//	 
+//	 stmt.setInt(1,user.getUserId());
+//	 stmt.setString(2,user.getPassword());
+//	 stmt.setString(3,user.getUserName());
+//	 stmt.setString(4,user.getRole());
+//	
+//	 int userId = user.getUserId();
+//	
+//	 logger.info(user.getRole());
+//	 
+//	 if((user.getRole()).equals("admin"))
+//	 {
+//		 AdminDao admindao = new AdminDaoImpl();
+//		 admindao.addUser(userId);
+//	 }
+//	 
+//	 if((user.getRole()).equals("professor"))
+//	 {
+//		  sql = "insert into professor values(?,?,?) where userId=?";
+//		  stmt = conn.prepareStatement(sql);
+//		  logger.info("Enter your name");
+//		  String name = sc.nextLine();
+//		  
+//		  stmt.setString(1,name);
+//		  
+//		  logger.info("Enter your gender");
+//		  String gender = sc.nextLine();
+//		  stmt.setString(2,gender);
+//		  
+//		  stmt.setInt(3,userId);
+//		 // s = stmt.executeUpdate();
+//	 }
+//	 
+//	 if((user.getRole()).equals("student"))
+//	 {
+//		  sql = "insert into student values(?,?,?) where userId=?";
+//		  stmt = conn.prepareStatement(sql);
+//		  logger.info("Enter your name");
+//		  String name = sc.nextLine();
+//		  
+//		  stmt.setString(1,name);
+//		  
+//		  logger.info("Enter your gender");
+//		  String gender = sc.nextLine();
+//		  stmt.setString(2,gender);
+//		  
+//		  stmt.setInt(3,userId);
+//		  //s = stmt.executeUpdate();
+//	 }
+//	 //stmt.setString(5,user.getGender());
+//	 
+//	 
+//	 logger.info(user.getUserName()+ " added");
+//	 int s = stmt.executeUpdate();
+//	 }
+//	 catch(Exception e) {
+//		 
+//	 }
+//	
+//}

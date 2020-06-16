@@ -10,10 +10,11 @@ import com.flipkart.bean.Course;
 import com.flipkart.client.UserClient;
 import com.flipkart.dao.CatalogDao;
 import com.flipkart.dao.CatalogDaoImpl;
-import com.flipkart.dao.RegisterationDao;
-import com.flipkart.dao.RegisterationDaoImpl;
-//import com.flipkart.dao.RegistrationDao;
-//import com.flipkart.dao.RegistrationDaoImpl;
+import com.flipkart.dao.CoursesDao;
+import com.flipkart.dao.CoursesDaoImpl;
+import com.flipkart.dao.CoursesDao;
+import com.flipkart.dao.RegistrationDao;
+import com.flipkart.dao.RegistrationDaoImpl;
 
 public class StudentOperation implements StudentInterface{
 	private static Logger logger = Logger.getLogger(StudentOperation.class);
@@ -37,8 +38,8 @@ public class StudentOperation implements StudentInterface{
 		int courseId = sc.nextInt();
 		logger.info("Enter the user Id");
 		int userId = sc.nextInt();
-		RegisterationDao registerationdao = new RegisterationDaoImpl();
-		registerationdao.addCourse(courseId,userId);
+		CoursesDao Coursesdao = new CoursesDaoImpl();
+		Coursesdao.addCourse(courseId,userId);
 	}
 	
 	@Override
@@ -48,15 +49,25 @@ public class StudentOperation implements StudentInterface{
 		int courseId = sc.nextInt();
 		logger.info("Enter the user Id");
 		int userId = sc.nextInt();
-		RegisterationDao registerationdao = new RegisterationDaoImpl();
-		registerationdao.dropCourse(courseId,userId);
+		CoursesDao Coursesdao = new CoursesDaoImpl();
+		Coursesdao.dropCourse(courseId,userId);
 		
 	}
 
 	@Override
 	public void viewGrades(int userId) {
-		RegisterationDao registerationdao = new RegisterationDaoImpl();
-		registerationdao.viewGrades(userId);
+		CoursesDao Coursesdao = new CoursesDaoImpl();
+		Coursesdao.viewGrades(userId);
+	}
+
+	@Override
+	public void doPayment() {
+		Scanner sc = new Scanner(System.in);
+		logger.info("Enter the user Id");
+		int userId = sc.nextInt();
+		CatalogDao catalogdao = new CatalogDaoImpl();
+		catalogdao.doPayment(userId);
+		
 	}
 }
 

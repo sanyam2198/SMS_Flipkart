@@ -51,4 +51,29 @@ public class CatalogDaoImpl implements CatalogDao{
 		}
 		return course_list;
 	}
+
+	@Override
+	public void doPayment(int userId) {
+		conn = DBUtil.getConnection();
+		
+		try {
+			String sql = "select sum(coursePayment) as totalPayment from courses join catalog on catalog.courseid = courses.courseId where userId = ? ";
+			stmt = conn.prepareStatement(sql);
+			stmt.setInt(1,userId);
+			ResultSet rs = stmt.executeQuery();
+			
+			int payment=0;
+			while(rs.next())
+			{
+				 payment = rs.getInt("totalPayment");
+			}
+			logger.info(payment);
+			
+		}
+		catch(Exception e) {
+			
+		}
+		
+	}
+
 }

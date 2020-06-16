@@ -33,8 +33,7 @@ public class UserClient {
 		
 		// Selecting from the options 
 		logger.info("1 Check Identity");
-//		logger.info("2 Register User");
-		
+
 		while(true) 
 		{
 			logger.info("Select an operation you want to do ");
@@ -71,17 +70,24 @@ public class UserClient {
 							 StudentInterface studentOpt = new StudentOperation();
 							 studentOpt.addCourse();
 							 break;
+							 
 						 case 2:
 							 studentOpt = new StudentOperation();
 							 studentOpt.dropCourse();
-						 case 3:
 							 break;
+							 
+						 case 3:
+							 studentOpt = new StudentOperation();
+							 studentOpt.doPayment();
+							 break;
+							 
 						 case 4:
 							 logger.info("Enter your userId");
 							 int userId = sc.nextInt();
 							 studentOpt = new StudentOperation();
 							 studentOpt.viewGrades(userId);
 							 break;
+							 
 						 case 5:
 						      studentOpt = new StudentOperation();
 						      String courseCatalog = studentOpt.requestCatalog();

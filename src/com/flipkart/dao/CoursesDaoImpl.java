@@ -10,16 +10,16 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.utils.DBUtil;
 
-public class RegisterationDaoImpl implements RegisterationDao {
+public class CoursesDaoImpl implements CoursesDao {
 
-	private static Logger logger = Logger.getLogger(RegisterationDaoImpl.class);
+	private static Logger logger = Logger.getLogger(CoursesDaoImpl.class);
 	@Override
 	public void addCourse(int courseId, int userId) {
        Connection conn = DBUtil.getConnection();
 		
 		try {
 			
-			String sql = "insert into registeration(courseId,userId) values(?,?)";
+			String sql = "insert into courses(courseId,userId) values(?,?)";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setInt(1,courseId);
 			stmt.setInt(2,userId);
@@ -40,7 +40,7 @@ public class RegisterationDaoImpl implements RegisterationDao {
 			
 			try {
 				
-				String sql = "delete from registeration where courseId=? and userId=?";
+				String sql = "delete from courses where courseId=? and userId=?";
 				PreparedStatement stmt = conn.prepareStatement(sql);
 				stmt.setInt(1,courseId);
 				stmt.setInt(2,userId);
@@ -64,7 +64,7 @@ public class RegisterationDaoImpl implements RegisterationDao {
 			
 			try {
 				
-				String sql = "select * from registeration where userId=?";
+				String sql = "select * from courses where userId=?";
 				PreparedStatement stmt = conn.prepareStatement(sql);
 				stmt.setInt(1,userId);
                  ResultSet rs = stmt.executeQuery();
