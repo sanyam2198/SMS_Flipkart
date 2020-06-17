@@ -2,6 +2,7 @@ package com.flipkart.service;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -19,72 +20,41 @@ import com.flipkart.dao.RegistrationDaoImpl;
 public class StudentOperation implements StudentInterface{
 	private static Logger logger = Logger.getLogger(StudentOperation.class);
 	
+	// Method used to list all the courses in catalog.
 	@Override
-	public String requestCatalog() {
-
+	public List<Course> requestCatalog() {
 		CatalogDao catalogdao = new CatalogDaoImpl();
-		List<Course> catalog = catalogdao.fetchCatalog();
-		logger.info("####################################################################");
-        logger.info("All the courses are listed here : \n");
-		catalog.forEach(course -> logger.info(course.getCoursename()+"   "+ course.getCourseid() + "   " + course.getCourseDescription()));
-		logger.info("####################################################################");
-		return "";
+		return catalogdao.fetchCatalog();
 	}
 	
+	// Method used to add course by student.
 	@Override
-	public void addCourse() {
-		Scanner sc = new Scanner(System.in);
-		logger.info("Enter the course Id");
-		int courseId = sc.nextInt();
-		logger.info("Enter the user Id");
-		int userId = sc.nextInt();
-		
+	public void addCourse(int courseId,int userId) {
 		CoursesDao Coursesdao = new CoursesDaoImpl();
 		Coursesdao.addCourse(courseId,userId);
 	}
 	
+	// Method used to drop course by student.
 	@Override
-	public void dropCourse() {
-		Scanner sc = new Scanner(System.in);
-		logger.info("Enter the course Id");
-		int courseId = sc.nextInt();
-		logger.info("Enter the user Id");
-		int userId = sc.nextInt();
+	public void dropCourse(int courseId,int userId) {
 		CoursesDao Coursesdao = new CoursesDaoImpl();
 		Coursesdao.dropCourse(courseId,userId);
-		
 	}
 
+	// Method used to view grades by student.
 	@Override
-	public void viewGrades(int userId) {
+	public Map<Integer, String> viewGrades(int userId) {
 		CoursesDao Coursesdao = new CoursesDaoImpl();
-		Coursesdao.viewGrades(userId);
+		return Coursesdao.viewGrades(userId);
 	}
 
+	// Method used to calculate payable amount by student.
 	@Override
-	public int doPayment() {
-		Scanner sc = new Scanner(System.in);
-		logger.info("Enter the user Id");
-		int userId = sc.nextInt();
+	public int doPayment(int userId) {
 		CoursesDao coursesdao = new CoursesDaoImpl();
 		int payment = coursesdao.doPayment(userId);
 		return payment;
 	}
 }
 
-
-//CatalogDao catalogdao = new CatalogDaoImpl();
-//List<Course> catalog = catalogdao.fetchCatalog();
-//String s = "";
-//Iterator<Course> i  = catalog.iterator();
-//Course course;
-//
-//while(i.hasNext())
-//{
-//	course = i.next();
-////	logger.debug(course.getCourseid());
-//	s = s + course.getCourseid() + "," + course.getCoursename() + "," + course.getCourseDescription();
-//}
-//
-//return s;
 

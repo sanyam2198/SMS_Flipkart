@@ -22,31 +22,7 @@ public class AdminOperation implements AdminInterface {
 	// Adding the Users.
 	
 	@Override
-	public void addUser() {
-		User user = new User();
-		logger.info("Enter the userId");
-		int userId = sc.nextInt();
-		user.setUserId(userId);
-		
-		logger.info("Enter the password");
-		String password = sc.nextLine();
-		password = sc.nextLine();
-		
-		user.setPassword(password);
-		
-		logger.info("Enter the userName");
-		String userName = sc.nextLine();
-		user.setUserName(userName);
-		
-		logger.info("Enter the role");
-		String role = sc.nextLine();
-		user.setRole(role);
-		
-//		logger.info("Enter the gender");
-//		String gender = sc.nextLine();
-//		user.setGender(gender);
-		
-		
+	public void addUser(User user) {
 		UserDao userDao = new UserDaoImpl();
 		userDao.addUser(user);
 	}
@@ -89,24 +65,9 @@ public class AdminOperation implements AdminInterface {
 
 	// Adding the Courses.
 	@Override
-	public void addCourse() {
-		Course course= new Course();
-		logger.info("Enter the coursename");
-		String coursename = sc.nextLine();
-		course.setCoursename(coursename);
-		
-		logger.info("Enter the courseid");
-		int courseID = sc.nextInt();
-		course.setCourseid(courseID);
-		
-		logger.info("Enter the Course Description");
-		String courseDesc = sc.nextLine();
-		 courseDesc = sc.nextLine();
-		course.setCourseDescription(courseDesc);
-		
+	public void addCourse(Course course) {
 		UserDao userDao = new UserDaoImpl();
 		userDao.addCourse(course);
-		
 	}
 	
 	// Deleting the Courses.
@@ -147,15 +108,10 @@ public class AdminOperation implements AdminInterface {
 	// Viewing all the users.
 	
 	@Override
-	public void viewAllStudents() {
+	public List <User> viewAllStudents() {
 		UserDao userDao = new UserDaoImpl();
-		List <User> userList = userDao.viewUsers();
+		return userDao.viewUsers();
 		//System.out.println(userList.size());
-		logger.info("##############################################################################");
-		logger.info("\n");
-		String userList1 = userList.stream().flatMap(user -> Stream.of(user.getGender().equals("male") ? "Mr.".concat(user.getUserName()):"Miss.".concat(user.getUserName()), user.getPassword(), user.getRole(),"\n")).collect(Collectors.joining(" "));
-		logger.info(userList1);
-		logger.info("##############################################################################");
 	}
 
 }

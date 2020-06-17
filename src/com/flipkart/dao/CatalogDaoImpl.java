@@ -20,6 +20,8 @@ public class CatalogDaoImpl implements CatalogDao{
 	Connection conn = null;
 	PreparedStatement stmt = null;
 	
+	// A function that returns all the courses along with details like payment and description of the course.
+	
 	public List<Course> fetchCatalog()
 	{
 		conn = DBUtil.getConnection();

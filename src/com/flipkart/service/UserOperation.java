@@ -19,21 +19,8 @@ public class UserOperation implements UserInterface{
 		
 		String s="";
 		try {
-			Scanner sc = new Scanner(System.in);
-			
-			logger.info("Enter the userName");
-			String userName = sc.nextLine();
-			user.setUserName(userName);
-			
-			logger.info("Enter your password");
-			String password = sc.nextLine();
-			user.setPassword(password);
-			
 			UserDao userdao = new UserDaoImpl();
 			 s= userdao.checkIdentity(user);
-			 
-			 // logger.info(message);
-			return s;
 		}
 		catch(Exception e) {
 			//logger.error(e.viewLog());
@@ -43,38 +30,39 @@ public class UserOperation implements UserInterface{
 		
 	}
 
-	@Override
-	public void registerUser(User user) {
-		
-		try {
-			logger.info("Enter the userId");
-			Scanner sc = new Scanner(System.in);
-			int userId = sc.nextInt();
-			user.setUserId(userId);
-			
-			logger.info("Enter your password");
-			String password = sc.nextLine();
-			user.setPassword(password);
-			
-			logger.info("Enter the userName");
-			String userName = sc.nextLine();
-			user.setUserName(userName);
-			
-			logger.info("What's your role");
-			String role = sc.nextLine();
-			user.setRole(role);
-			
-			UserDao userdao = new UserDaoImpl();
-			userdao.registerUser(user);
-			
-		}
-		catch(Exception e) {
-			//logger.error(e.viewLog());
-			e.printStackTrace();
-		}
-		
-		
-	}
+//	// Registering a new user.
+//	@Override
+//	public void registerUser(User user) {
+//		
+//		try {
+//			logger.info("Enter the userId");
+//			Scanner sc = new Scanner(System.in);
+//			int userId = sc.nextInt();
+//			user.setUserId(userId);
+//			
+//			logger.info("Enter your password");
+//			String password = sc.nextLine();
+//			user.setPassword(password);
+//			
+//			logger.info("Enter the userName");
+//			String userName = sc.nextLine();
+//			user.setUserName(userName);
+//			
+//			logger.info("What's your role");
+//			String role = sc.nextLine();
+//			user.setRole(role);
+//			
+//			UserDao userdao = new UserDaoImpl();
+//			userdao.registerUser(user);
+//			
+//		}
+//		catch(Exception e) {
+//			//logger.error(e.viewLog());
+//			e.printStackTrace();
+//		}
+//		
+//		
+//	}
 
 }
 

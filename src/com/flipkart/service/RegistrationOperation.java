@@ -9,12 +9,14 @@ import com.flipkart.dao.RegistrationDaoImpl;
 public class RegistrationOperation implements RegistrationInterface {
 
 	private static Logger logger = Logger.getLogger(RegistrationOperation.class);
+	
+	// Method used to complete the registration .
 	@Override
-	public void completeRegistration(int userId) {
+	public void completeRegistration(int userId, int registrationId, int paymentId) {
      
 		RegistrationDao registrationDao = new RegistrationDaoImpl();
-		registrationDao.doRegistration(userId);
-		logger.info("Welcome to the University  "+ userId);
+		registrationDao.doRegistration(userId,registrationId, paymentId);
 	}
+
 
 }

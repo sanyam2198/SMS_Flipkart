@@ -1,4 +1,4 @@
-// Done - Created to pass the whole parameters as a single object.
+// Bean class for user contains userId, password, userName, role and gender .
 
 package com.flipkart.bean;
 

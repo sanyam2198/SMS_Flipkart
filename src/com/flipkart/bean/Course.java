@@ -7,6 +7,19 @@ public class Course {
 	String coursename;
 	int courseid;
 	String courseDescription;
+	int coursePayment;
+	/**
+	 * @return the coursePayment
+	 */
+	public int getCoursePayment() {
+		return coursePayment;
+	}
+	/**
+	 * @param coursePayment the coursePayment to set
+	 */
+	public void setCoursePayment(int coursePayment) {
+		this.coursePayment = coursePayment;
+	}
 	/**
 	 * @return the coursename
 	 */

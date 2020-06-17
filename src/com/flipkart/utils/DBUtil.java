@@ -1,3 +1,5 @@
+// DB Utils class that is used to connect to SQL Database.
+
 package com.flipkart.utils;
 
 import java.io.FileNotFoundException;

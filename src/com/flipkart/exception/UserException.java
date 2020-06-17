@@ -1,3 +1,5 @@
+// Used to handle to the exceptions.
+
 package com.flipkart.exception;
 
 import org.apache.log4j.Logger;

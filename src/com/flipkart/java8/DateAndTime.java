@@ -1,3 +1,5 @@
+// Used to get the time and date of the moment an event occured.
+
 package com.flipkart.java8;
 
 import java.time.LocalDate;
@@ -20,6 +22,8 @@ public class DateAndTime {
 	    public void displayCurrentDateAndTime() {
 		LocalDate localDate = LocalDate.now();
 		LocalTime localTime = LocalTime.now();
+		
+		// Printing in a standard way.
 		
 		logger.info(" " + localDate.getDayOfWeek() + "    " + localDate.getDayOfMonth() + " - " + localDate.getMonth()+" - " + localDate.getYear() + "   " + localTime + " .");
 //		logger.info(localDate.getDayOfMonth() + "/" + localDate.getMonth()+"/" + localDate.getYear()+"." );

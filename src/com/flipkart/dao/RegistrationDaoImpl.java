@@ -7,6 +7,7 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Registration;
+import com.flipkart.constant.SQLConstantQueries;
 import com.flipkart.utils.DBUtil;
 
 
@@ -14,24 +15,21 @@ public class RegistrationDaoImpl implements RegistrationDao {
 	
 	private static Logger logger = Logger.getLogger(RegistrationDaoImpl.class);
 	
-	public void doRegistration(int userId) {
+	// A function that helps in completing the registration part.
+	public void doRegistration(int userId, int registrationId, int paymentId) {
 		Registration registration = new Registration();
 		
 		  Connection conn = DBUtil.getConnection();
 			
 			try {
 				
-				String sql = "insert into registration values(?,?,?,?)";
-				PreparedStatement stmt = conn.prepareStatement(sql);
+				// String sql = "insert into registration values(?,?,?,?)";
+				PreparedStatement stmt = conn.prepareStatement(SQLConstantQueries.REGISTER);
 				
 				Scanner sc = new Scanner(System.in);
-				logger.info("Enter Registration Id");
-				int registrationId = sc.nextInt();
+				
 				
 				stmt.setInt(1,registrationId);
-				
-				logger.info("Enter the payment Id");
-				int paymentId = sc.nextInt();
 				stmt.setInt(2,paymentId);
 				
 				stmt.setInt(3,userId);

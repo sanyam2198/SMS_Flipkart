@@ -1,6 +1,7 @@
 package com.flipkart.service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
@@ -16,37 +17,37 @@ import com.flipkart.dao.ProfessorCoursesDaoImpl;
 public class ProfessorOperation implements ProfessorInterface {
 
 	private static Logger logger = Logger.getLogger(ProfessorOperation.class);
+	
+	// Method to view the professor courses.
 	@Override
-	public void viewProfessorCourses(int userId) {
+	public List<Integer> viewProfessorCourses(int userId) {
 		ProfessorCoursesDao professorCoursesDao = new ProfessorCoursesDaoImpl();
-		professorCoursesDao.viewProfessorCourses(userId);
+		return professorCoursesDao.viewProfessorCourses(userId);
 	}
 
+	// Method to submit final grades of the students.
 	@Override
-	public void submitGrades(int pUserId) {
+	public void submitGrades(int pUserId, int sUserId, int courseId, String grade) {
 		
 		CoursesDao coursesDao = new CoursesDaoImpl();
-		coursesDao.submitGrades(pUserId);
+		coursesDao.submitGrades(pUserId,sUserId,courseId,grade);
 		logger.info("Marks successfuly submitted");
 		
 	}
 
+	// Function for Viewing all the courses that are available.
 	@Override
-	public void viewCourses() {
+	public List<Course> viewCourses() {
 		CatalogDao catalogdao = new CatalogDaoImpl();
-		List<Course> catalog = catalogdao.fetchCatalog();
-		logger.info("####################################################################");
-        logger.info("All the courses are listed here : \n");
-		catalog.forEach(course -> logger.info(course.getCoursename()+"   "+ course.getCourseid() + "   " + course.getCourseDescription()));
-		logger.info("####################################################################");
-		
+		return catalogdao.fetchCatalog();	
 	}
 
+	// View all the enrolled students taught by the professor.
 	@Override
-	public void viewStudents(int userId) {
+	public  Map<Integer, Integer> viewStudents(int userId) {
 		
 		ProfessorCoursesDao professorCoursesDao = new ProfessorCoursesDaoImpl();
-		professorCoursesDao.viewStudents(userId);
+		return professorCoursesDao.viewStudents(userId);
 	}
 
 }
