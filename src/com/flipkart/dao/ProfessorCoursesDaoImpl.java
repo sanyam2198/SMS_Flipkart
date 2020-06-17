@@ -69,40 +69,4 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 		
 	}
 
-	@Override
-	public void submitGrades(int pUserId) {
-		
-		Scanner sc = new Scanner(System.in);
-		logger.info("Enter the userId of student");
-		int userId = sc.nextInt();
-		logger.info("Enter the courseId");
-		int courseId = sc.nextInt();
-		logger.info("Enter the grade");
-		String grade = sc.nextLine();
-		grade = sc.nextLine();
-		
-		 Connection conn = DBUtil.getConnection();
-			
-			try {
-				
-				String sql =  "update courses set grades=? where userId=? and courseId=?";
-				PreparedStatement	stmt = conn.prepareStatement(sql);
-				
-		       stmt.setString(1,grade);
-		       stmt.setInt(2,userId);
-		       stmt.setInt(3,courseId);
-		       
-		       int iw= stmt.executeUpdate();  
-		       logger.info(userId + " has been awarded " + grade + " grade in "+ courseId);
-			
-		
-	}
-			catch(Exception e) {
-				logger.error("No marks could be updated by this professor");
-				e.printStackTrace();
-			}
-		
-		
-	}
-
 }

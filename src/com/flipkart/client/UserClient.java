@@ -78,7 +78,7 @@ public class UserClient {
 							 
 						 case 3:
 							 studentOpt = new StudentOperation();
-							 studentOpt.doPayment();
+							 logger.info(studentOpt.doPayment());
 							 break;
 							 
 						 case 4:
@@ -112,6 +112,47 @@ public class UserClient {
 						 }
 					 }
 					 }
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
+					 
 					 
 					// If the user is a professor the following options would be available.
 					 

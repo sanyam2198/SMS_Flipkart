@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 import com.flipkart.utils.DBUtil;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.User;
+import com.flipkart.constant.SQLConstantQueries;
+
 import org.apache.log4j.Logger;
 
 public class UserDaoImpl implements UserDao {
@@ -21,44 +23,32 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public String checkIdentity(User user) {
 
-      Connection conn = DBUtil.getConnection();
+		String role = null;
+		Connection conn = DBUtil.getConnection();
+		try
+		{
+			PreparedStatement stmt = conn.prepareStatement(SQLConstantQueries.USER_LOGIN);
+			
+			stmt.setString(1,user.getUserName());
+			stmt.setString(2, user.getPassword());
 		
-		try {
 			
-			String sql = "SELECT userId, password, userName, role FROM users";
-			PreparedStatement stmt = conn.prepareStatement(sql);
-			ResultSet rs = stmt.executeQuery(sql);
-			int flag=0;
+			ResultSet rs = stmt.executeQuery();
 			
-			while(rs.next()) {
-				  int userId = rs.getInt("userId");
-				  String password = rs.getString("password");
-				  String userName = rs.getString("userName");
-				  String role = rs.getString("role");
-				  
-//				  logger.info(user.getUserName());
-//				  logger.info(user.getPassword());
-			     
-			    if(userName.equals(user.getUserName()))
-			    {
-			    	flag=1;
-			    	if(password.equals(user.getPassword())) {
-			    		  logger.info("Welcome : "+ userName);
-			    		  logger.info(userId + "  "+ password + "  "+ userName + "  "+ role);
-//						  logger.info(password);
-//						  logger.info(userName);
-//						  logger.info(role);
-						return role;
-					}
-					else
-						return "Incorrect password or username";
-			    }
+			if(rs.next())
+			{
+				user.setRole(rs.getString("role"));
+				user.setUserId(rs.getInt("userId"));
+				role = rs.getString("role");
 			}
+			
 		}
-		catch(Exception e) {
-			e.printStackTrace();
+		catch(Exception e)
+		{
+			logger.error(e.getMessage());
 		}
-		return "Incorrect password or username";
+	
+		return role;
 	}
 
 	@Override
@@ -79,8 +69,46 @@ public class UserDaoImpl implements UserDao {
 	 stmt.setString(3,user.getUserName());
 	 stmt.setString(4,user.getRole());
 	 stmt.setString(5,user.getGender());
-	 
 	 int s = stmt.executeUpdate();
+	 
+	 if(user.getRole().equals("student"))
+	 {
+	  sql = "insert into students values (?,?,?,?,?)";
+	  stmt = conn.prepareStatement(sql);
+	 
+	 stmt.setInt(1,user.getUserId());
+	 stmt.setString(2,user.getPassword());
+	 stmt.setString(3,user.getUserName());
+	 stmt.setString(4,user.getRole());
+	 stmt.setString(5,user.getGender());
+	 }
+	 
+	 
+	 if(user.getRole().equals("admin"))
+	 {
+	  sql = "insert into admin values (?,?,?,?,?)";
+	  stmt = conn.prepareStatement(sql);
+	 
+	 stmt.setInt(1,user.getUserId());
+	 stmt.setString(2,user.getPassword());
+	 stmt.setString(3,user.getUserName());
+	 stmt.setString(4,user.getRole());
+	 stmt.setString(5,user.getGender());
+	 }
+	 
+	 
+	 if(user.getRole().equals("professor"))
+	 {
+	  sql = "insert into professor values (?,?,?,?,?)";
+	  stmt = conn.prepareStatement(sql);
+	 
+	 stmt.setInt(1,user.getUserId());
+	 stmt.setString(2,user.getPassword());
+	 stmt.setString(3,user.getUserName());
+	 stmt.setString(4,user.getRole());
+	 stmt.setString(5,user.getGender());
+	 }
+	 
 	 logger.info(user.getUserName()+ " added");
 	 
 	 }

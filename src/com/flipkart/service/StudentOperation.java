@@ -38,6 +38,7 @@ public class StudentOperation implements StudentInterface{
 		int courseId = sc.nextInt();
 		logger.info("Enter the user Id");
 		int userId = sc.nextInt();
+		
 		CoursesDao Coursesdao = new CoursesDaoImpl();
 		Coursesdao.addCourse(courseId,userId);
 	}
@@ -61,13 +62,13 @@ public class StudentOperation implements StudentInterface{
 	}
 
 	@Override
-	public void doPayment() {
+	public int doPayment() {
 		Scanner sc = new Scanner(System.in);
 		logger.info("Enter the user Id");
 		int userId = sc.nextInt();
-		CatalogDao catalogdao = new CatalogDaoImpl();
-		catalogdao.doPayment(userId);
-		
+		CoursesDao coursesdao = new CoursesDaoImpl();
+		int payment = coursesdao.doPayment(userId);
+		return payment;
 	}
 }
 

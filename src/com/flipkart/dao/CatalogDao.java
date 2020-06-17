@@ -6,5 +6,5 @@ import com.flipkart.bean.Course;
 
 public interface CatalogDao {
 	public List<Course> fetchCatalog();
-	public void doPayment(int userId);
+	
 }

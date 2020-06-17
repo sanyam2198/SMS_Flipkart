@@ -8,6 +8,8 @@ import org.apache.log4j.Logger;
 import com.flipkart.bean.Course;
 import com.flipkart.dao.CatalogDao;
 import com.flipkart.dao.CatalogDaoImpl;
+import com.flipkart.dao.CoursesDao;
+import com.flipkart.dao.CoursesDaoImpl;
 import com.flipkart.dao.ProfessorCoursesDao;
 import com.flipkart.dao.ProfessorCoursesDaoImpl;
 
@@ -23,8 +25,8 @@ public class ProfessorOperation implements ProfessorInterface {
 	@Override
 	public void submitGrades(int pUserId) {
 		
-		ProfessorCoursesDao professorCoursesDao = new ProfessorCoursesDaoImpl();
-		professorCoursesDao.submitGrades(pUserId);
+		CoursesDao coursesDao = new CoursesDaoImpl();
+		coursesDao.submitGrades(pUserId);
 		logger.info("Marks successfuly submitted");
 		
 	}
