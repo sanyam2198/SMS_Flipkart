@@ -81,5 +81,29 @@ public class ProfessorCoursesDaoImpl implements ProfessorCoursesDao {
 		
 		return hm;
 	}
+	
+	// Selection of a course by professor.
+	public void selectCourse(int userId,int courseId) {
+		// TODO Auto-generated method stub
+
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement stmt = null;
+
+		try
+		{
+		stmt = conn.prepareStatement(SQLConstantQueries.SELECT_COURSE_TO_TEACH);
+		stmt.setInt(1,courseId);
+		stmt.setInt(2,userId);
+		
+
+		stmt.executeUpdate();
+
+		}
+		catch(Exception e)
+		{
+		logger.error(e.getMessage());
+		}
+
+		}
 
 }

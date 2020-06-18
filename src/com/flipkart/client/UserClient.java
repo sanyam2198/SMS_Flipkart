@@ -175,7 +175,7 @@ public class UserClient {
 					 if(role.equals("professor")) {
 						 
 						 // All the options that are available to the professor.
-						 logger.info("\n1 View My Courses\n2 View Course Catlaog\n 3 View Student Details\n 4 Record Grades\n");
+						 logger.info("\n1 View My Courses\n2 View Course Catlaog\n 3 View Student Details\n 4 Record Grades\n 5 Add Course to teach");
 					 
 					 while(true) {
 						 logger.info("Enter your choice");
@@ -241,6 +241,16 @@ public class UserClient {
 							 professorOpt = new ProfessorOperation();
 							 professorOpt.submitGrades(userId,sUserId,courseId,grade);
 							 break;
+							 
+						// Selection of a course by professor.
+						 case 5:
+							 logger.info("Enter your userId");
+							 userId = sc.nextInt();
+							 logger.info("Enter the courseId you want to teach");
+							 courseId = sc.nextInt();
+							 
+							 professorOpt = new ProfessorOperation();
+							 professorOpt.selectCourse(userId,courseId);
 						 }
 					 }
 					 }

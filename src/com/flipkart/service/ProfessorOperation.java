@@ -49,5 +49,11 @@ public class ProfessorOperation implements ProfessorInterface {
 		ProfessorCoursesDao professorCoursesDao = new ProfessorCoursesDaoImpl();
 		return professorCoursesDao.viewStudents(userId);
 	}
+	
+	// Selection of a course by professor.
+	public void selectCourse(int userId, int courseId) {
+		ProfessorCoursesDao professorCoursesDao = new ProfessorCoursesDaoImpl();
+		 professorCoursesDao.selectCourse(userId,courseId);
+	}
 
 }

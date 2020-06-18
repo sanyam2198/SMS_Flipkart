@@ -13,4 +13,5 @@ public interface ProfessorInterface {
 	public void submitGrades(int pUserId, int sUserId, int courseId, String grade);
 	public List<Course> viewCourses();
 	public Map<Integer, Integer> viewStudents(int userId);
+	public void selectCourse(int userId, int courseId);
 }

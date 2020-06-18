@@ -18,5 +18,5 @@ public class SQLConstantQueries {
 	public static final String  CREATE_COURSES = "insert into catalog values (?,?,?,?)";
 	public static final String  DELETE_COURSES = "delete from catalog where courseid=?";
 	public static final String  VIEW_USERS = "select * from users";
-	
+	public static final String SELECT_COURSE_TO_TEACH = "insert into professorcourses values (?,?)";
 }
