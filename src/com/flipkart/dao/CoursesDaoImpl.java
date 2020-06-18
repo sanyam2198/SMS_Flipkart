@@ -31,7 +31,7 @@ public class CoursesDaoImpl implements CoursesDao {
 			stmt.setInt(2,userId);
 			
 			int s= stmt.executeUpdate();
-			logger.info("Course " + courseId + " added for "+ userId);
+			//logger.info("Course " + courseId + " added for "+ userId);
 			  }
 		catch(Exception e) {
 			e.printStackTrace();
@@ -53,7 +53,7 @@ public class CoursesDaoImpl implements CoursesDao {
 				stmt.setInt(2,userId);
 				
 				int s= stmt.executeUpdate();
-				logger.info("Course " + courseId + " dropped for "+ userId);
+				// logger.info("Course " + courseId + " dropped for "+ userId);
 				  }
 			catch(Exception e) {
 				e.printStackTrace();
@@ -117,7 +117,7 @@ public class CoursesDaoImpl implements CoursesDao {
 			{
 				 payment = rs.getInt("totalPayment");
 			}
-			logger.info(payment);
+			//logger.info(payment);
 			
 		}
 		catch(Exception e) {

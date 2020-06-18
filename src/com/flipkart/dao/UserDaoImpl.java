@@ -111,7 +111,6 @@ public class UserDaoImpl implements UserDao {
 //	 stmt.setString(5,user.getGender());
 //	 }
 	 
-	 logger.info(user.getUserName()+ " added");
 	 
 	 }
 	 catch(Exception e) {
@@ -132,7 +131,7 @@ public class UserDaoImpl implements UserDao {
 		 stmt.setInt(1,userId);
 		 
 		 int s = stmt.executeUpdate();
-		 logger.info(userId+ " deleted");
+		 //logger.info(userId+ " deleted");
 		 }
          catch(Exception e) {
 			 
@@ -176,7 +175,7 @@ public class UserDaoImpl implements UserDao {
 		 try {
 			 
 		 //String sql = "insert into catalog values (?,?,?,?)";
-		 PreparedStatement stmt = conn.prepareStatement(SQLConstantQueries.ADD_COURSES);
+		 PreparedStatement stmt = conn.prepareStatement(SQLConstantQueries.CREATE_COURSES);
 		 
 		 stmt.setString(1,course.getCoursename());
 		 stmt.setInt(2,course.getCourseid());
@@ -184,7 +183,7 @@ public class UserDaoImpl implements UserDao {
 		 stmt.setInt(4,course.getCoursePayment());
 		 
 		 int s = stmt.executeUpdate();
-		 logger.info(course.getCoursename()+ " added");
+		 //logger.info(course.getCoursename()+ " added");
 		 
 		 }
 		 catch(Exception e) {
@@ -205,7 +204,7 @@ public class UserDaoImpl implements UserDao {
 		 stmt.setInt(1,courseId);
 		 
 		 int s = stmt.executeUpdate();
-		 logger.info(courseId + " deleted");
+		 //logger.info(courseId + " deleted");
 		 }
          catch(Exception e) {
 			 

@@ -21,6 +21,7 @@ public class UserOperation implements UserInterface{
 		try {
 			UserDao userdao = new UserDaoImpl();
 			 s= userdao.checkIdentity(user);
+			 
 		}
 		catch(Exception e) {
 			//logger.error(e.viewLog());

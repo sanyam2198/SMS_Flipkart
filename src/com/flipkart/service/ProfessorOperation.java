@@ -31,7 +31,7 @@ public class ProfessorOperation implements ProfessorInterface {
 		
 		CoursesDao coursesDao = new CoursesDaoImpl();
 		coursesDao.submitGrades(pUserId,sUserId,courseId,grade);
-		logger.info("Marks successfuly submitted");
+		//logger.info("Marks successfuly submitted");
 		
 	}
 
