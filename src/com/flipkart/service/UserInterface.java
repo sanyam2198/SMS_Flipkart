@@ -6,6 +6,7 @@
 package com.flipkart.service;
 
 import com.flipkart.bean.User;
+import com.flipkart.exception.LoginException;
 
 /**
  * @author RAJIV SOOD
@@ -13,7 +14,7 @@ import com.flipkart.bean.User;
  */
 public interface UserInterface {
 	
-	public String checkIdentity (User user);
+	public String checkIdentity (User user) throws LoginException ;
 	//public void registerUser (User user);
 
 }

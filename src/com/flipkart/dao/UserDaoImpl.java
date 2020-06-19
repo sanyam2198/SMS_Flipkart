@@ -73,43 +73,7 @@ public class UserDaoImpl implements UserDao {
 	 stmt.setString(5,user.getGender());
 	 int s = stmt.executeUpdate();
 	 
-//	 if(user.getRole().equals("student"))
-//	 {
-//	  // sql = "insert into students values (?,?,?,?,?)";
-//	  stmt = conn.prepareStatement(sql);
-//	 
-//	 stmt.setInt(1,user.getUserId());
-//	 stmt.setString(2,user.getPassword());
-//	 stmt.setString(3,user.getUserName());
-//	 stmt.setString(4,user.getRole());
-//	 stmt.setString(5,user.getGender());
-//	 }
-//	 
-//	 
-//	 if(user.getRole().equals("admin"))
-//	 {
-//	  sql = "insert into admin values (?,?,?,?,?)";
-//	  stmt = conn.prepareStatement(sql);
-//	 
-//	 stmt.setInt(1,user.getUserId());
-//	 stmt.setString(2,user.getPassword());
-//	 stmt.setString(3,user.getUserName());
-//	 stmt.setString(4,user.getRole());
-//	 stmt.setString(5,user.getGender());
-//	 }
-//	 
-//	 
-//	 if(user.getRole().equals("professor"))
-//	 {
-//	  sql = "insert into professor values (?,?,?,?,?)";
-//	  stmt = conn.prepareStatement(sql);
-//	 
-//	 stmt.setInt(1,user.getUserId());
-//	 stmt.setString(2,user.getPassword());
-//	 stmt.setString(3,user.getUserName());
-//	 stmt.setString(4,user.getRole());
-//	 stmt.setString(5,user.getGender());
-//	 }
+
 	 
 	 
 	 }

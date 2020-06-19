@@ -10,6 +10,8 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import javax.security.auth.login.LoginException;
+
 import org.apache.log4j.Logger;
 
 import com.flipkart.java8.*;
@@ -41,7 +43,7 @@ public class UserClient {
 
 		// Selecting from the options
 		logger.info("1 Check Identity");
-		// logger.info("2 Self Registration");
+		
 
 		while (true) {
 			logger.info("Select an operation you want to do ");
@@ -51,20 +53,32 @@ public class UserClient {
 			switch (choice) {
 			case 1:
 				String role = "";
-				try {
+				
 					// Checking the credentials of the user i.e user name and password.
-
 					User user = new User();
-					logger.info("Enter the userName");
-					String userName = sc.nextLine();
-					userName = sc.nextLine();
-					user.setUserName(userName);
+					String userName;
+					String password;
+					
+					try {
+						
+						logger.info("Enter the userName");
+					    userName = sc.nextLine();
+						userName = sc.nextLine();
+						user.setUserName(userName);
 
-					logger.info("Enter your password");
-					String password = sc.nextLine();
-					user.setPassword(password);
-					role = userOpt.checkIdentity(user);
-					logger.info(role);
+						logger.info("Enter your password");
+						password = sc.nextLine();
+						user.setPassword(password);
+						user.setUserId(-1);
+						role = userOpt.checkIdentity(user);
+						
+						logger.info(role);
+					}
+					
+					catch (com.flipkart.exception.LoginException e) {
+						// TODO Auto-generated catch block
+						logger.error(e.getMessage());
+					}
 
 					// Initializing the time for login and it will be displayed during the login in
 					// a proper format.
@@ -76,8 +90,7 @@ public class UserClient {
 					// If the user is a student the following options would be available.
 
 					if (role.equals("student")) {
-//						logger.info(
-//								"\n 1 Add Course\n 2 Drop Course\n 3 Pay Bill\n 4 View Report Card\n 5 Request Catalog \n 6 Register User \n 7 Log Out");
+
 						
 						logger.info("===========================================================");
 						logger.info("|         STUDENT MENU       	                        |");
@@ -102,7 +115,7 @@ public class UserClient {
 							case 1:
 								logger.info("Enter the course Id");
 								int courseId = sc.nextInt();
-								//logger.info("Enter the user Id");
+								
 								int userId = user.getUserId();
 
 								StudentInterface studentOpt = new StudentOperation();
@@ -114,7 +127,7 @@ public class UserClient {
 							case 2:
 								logger.info("Enter the course Id");
 								courseId = sc.nextInt();
-								//logger.info("Enter the user Id");
+								
 								userId = user.getUserId();
 								studentOpt = new StudentOperation();
 								studentOpt.dropCourse(courseId, userId);
@@ -124,7 +137,11 @@ public class UserClient {
 							// Paying the final Bill.
 							case 3:
 
-								//logger.info("Enter the user Id");
+								logger.info("These are your payment methods :-");
+								logger.info("1 Cash");
+								logger.info("2 Credit Card");
+								logger.info("3 Debit Card");
+								logger.info("4 Cheque");
 								userId = user.getUserId();
 								studentOpt = new StudentOperation();
 								int payment = studentOpt.doPayment(userId);
@@ -133,11 +150,10 @@ public class UserClient {
 
 							// Viewing final grades in the report card
 							case 4:
-								//logger.info("Enter your userId");
+								
 								userId = user.getUserId();
 								studentOpt = new StudentOperation();
 								Map<Integer, String> gradesList = studentOpt.viewGrades(userId);
-								// logger.info(gradesList.size());
 
 								logger.info("####################################################################");
 								logger.info("Here's your report card " + userId +"\n");
@@ -165,11 +181,11 @@ public class UserClient {
 								logger.info("####################################################################");
 								break;
 
-							// Make time more accurate
+							
 
 							// Doing the registration process.
 							case 6:
-								//logger.info("Enter the userId to be registered");
+								
 								userId = user.getUserId();
 								logger.info("Enter Registration Id");
 								int registrationId = sc.nextInt();
@@ -190,8 +206,6 @@ public class UserClient {
 								Duration duration = Duration.between(startTime, endTime);
 								logger.info("Thank you !!");
 								logger.info("Session Lasted for : " + duration.toMinutes() + " mins ");
-								// logger.info("Session Lasted for : " + duration.toMinutes() + " mins "+
-								// duration.toSeconds()+ " secs.");
 								return;
 							}
 						}
@@ -202,8 +216,6 @@ public class UserClient {
 					if (role.equals("professor")) {
 
 						// All the options that are available to the professor.
-//						logger.info(
-//								"\n1 View My Courses\n2 View Course Catlaog\n 3 View Student Details\n 4 Record Grades\n 5 Add Course to teach");
 
 						logger.info("======================================");
 					    logger.info("|        PROFESSOR MENU              |");
@@ -248,11 +260,10 @@ public class UserClient {
 								logger.info("####################################################################");
 								break;
 
-							// Fixing reqd..
 
 							// Viewing the students that are enrolled in a course taught by professor.
 							case 3:
-								//logger.info("Enter your userId");
+								
 								userId = user.getUserId();
 								professorOpt = new ProfessorOperation();
 
@@ -266,10 +277,11 @@ public class UserClient {
 								logger.info("####################################################################");
 								break;
 
+								
 							// Submitting the final grades for the student along with the corresponding
 							// course.
 							case 4:
-								//logger.info("Enter your userId");
+								
 								userId = user.getUserId();
 
 								logger.info("Enter the userId of student");
@@ -282,12 +294,12 @@ public class UserClient {
 
 								professorOpt = new ProfessorOperation();
 								professorOpt.submitGrades(userId, sUserId, courseId, grade);
-								logger.info("User "+ userId + " has been awarded "+ grade+ " in the course "+ courseId);
+								logger.info("User "+ sUserId + " has been awarded "+ grade+ " in the course "+ courseId);
 								break;
 
 							// Selection of a course by professor.
 							case 5:
-								//logger.info("Enter your userId");
+								
 								userId = user.getUserId();
 								logger.info("Enter the courseId you want to teach");
 								courseId = sc.nextInt();
@@ -297,6 +309,7 @@ public class UserClient {
 								logger.info("Congrats ! you are the new professor of " + courseId + " course.");
 								break;
 							
+							// Logging out.
 							case 6:
 								Instant endTime = Instant.now();
 								logger.info("Your logout time");
@@ -317,8 +330,7 @@ public class UserClient {
 					if (role.equals("admin")) {
 
 						// Following functionalities are available with the admin.
-//						logger.info(
-//								"\n 1 Add user\n 2 Delete User\n 3 Edit/Update User\n 4 Add Course\n 5 Delete Course\n 6  Edit/Update Course \n 7 View All Students ");
+
 
 						logger.info("============================");
 					    logger.info("|        ADMIN MENU         |");
@@ -328,9 +340,7 @@ public class UserClient {
 					    logger.info("|  3. Edit User             |");
 					    logger.info("|  4. Add Course            |");
 					    logger.info("|  5. Delete Course         |");
-					    logger.info("|  6. Update Course         |");
-					    logger.info("|  7. View All Users        |");
-					    logger.info("|  8. Log Out               |");
+					    logger.info("|  6. Log Out               |");
 					    logger.info("============================");
 						AdminInterface adminOpt = new AdminOperation();
 
@@ -413,28 +423,8 @@ public class UserClient {
 								adminOpt.deleteCourse(courseId);
 								logger.info(courseId+ " deleted");
 								break;
-
-							// Updating course details in the system
-							case 6:
-								logger.info("Enter the courseId to edit");
-								courseId = sc.nextInt();
-								adminOpt.editCourse(courseId);
-								break;
-
-							// Viewing all the users along with Mr/Mrs/Miss included before their names.
-								
-								
-							case 7:
-								List<User> userList = adminOpt.viewAllStudents();
-
-								logger.info("##############################################################################");
-								logger.info("\n");
-								String userList1 = userList.stream().flatMap(user2 -> Stream.of(user2.getGender().equals("male") ? "Mr.".concat(user2.getUserName()): "Miss.".concat(user2.getUserName()),user2.getPassword(), user2.getRole(), "\n")).collect(Collectors.joining(" "));
-								logger.info(userList1);
-								logger.info("##############################################################################");
-								break;
 							
-							case 8:
+							case 6:
 								Instant endTime = Instant.now();
 								logger.info("Your logout time");
 								dateAndTime = new DateAndTime();
@@ -442,38 +432,35 @@ public class UserClient {
 								Duration duration = Duration.between(startTime, endTime);
 								logger.info("Thank you !!");
 								logger.info("Session Lasted for : " + duration.toMinutes() + " mins ");
-								// logger.info("Session Lasted for : " + duration.toMinutes() + " mins "+
-								// duration.toSeconds()+ " secs.");
 								return;
 							}
 						}
 					}
 
-				} catch (Exception e) {
-					// logger.error(e.viewLog());
-					e.printStackTrace();
-				}
-				break;
-
-			// Registering a new user here.
-//			case 2:
-//				try {
-//					logger.info("Enter the userId to be registered");
-//					int userId = sc.nextInt();
-//					RegistrationInterface registrationOpt = new RegistrationOperation();
-//					registrationOpt.completeRegistration(userId);
-//				}
-//				catch(Exception e) {
-//					//logger.error(e.viewLog());
-//					e.printStackTrace();
-//				}
-//				break;
-//				
-//			default:
-//				break;
-
+			
 			}
 
 		}
 	}
 }
+
+
+////Updating course details in the system
+//case 6:
+//	logger.info("Enter the courseId to edit");
+//	courseId = sc.nextInt();
+//	adminOpt.editCourse(courseId);
+//	break;
+//
+//// Viewing all the users along with Mr/Mrs/Miss included before their names.
+//	
+//	
+//case 7:
+//	List<User> userList = adminOpt.viewAllStudents();
+//
+//	logger.info("##############################################################################");
+//	logger.info("\n");
+//	//String userList1 = userList.stream().flatMap(user2 -> Stream.of(user2.getGender().equals("male") ? "Mr.".concat(user2.getUserName()): "Miss.".concat(user2.getUserName()),user2.getPassword(), user2.getRole(), "\n")).collect(Collectors.joining(" "));
+//	logger.info(userList);
+//	logger.info("##############################################################################");
+//	break;
